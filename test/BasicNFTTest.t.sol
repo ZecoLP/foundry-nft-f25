@@ -31,4 +31,11 @@ contract BasicNFTTest is Test {
         assert(basicNft.balanceOf(USER) == 1);
         assert(keccak256(abi.encodePacked(PUG)) == keccak256(abi.encodePacked(basicNft.tokenURI(0))));
     }
+
+    function testConstructorInitializesCorrectly() public view {
+        assert(keccak256(abi.encodePacked(basicNft.name())) == keccak256(abi.encodePacked("Dogie")));
+        assert(keccak256(abi.encodePacked(basicNft.symbol())) == keccak256(abi.encodePacked("DOG")));
+
+        assertEq(basicNft.tokenURI(0), "");
+    }
 }
