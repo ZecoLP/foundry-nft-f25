@@ -4,7 +4,7 @@ pragma solidity ^0.8.18;
 
 import {Test, console} from "forge-std/Test.sol";
 import {MoodNFT} from "src/MoodNFT.sol";
-import {DeployMoodNFT} from "script/DeployMoodNft.s.sol";
+import {DeployMoodNFT} from "script/DeployMoodNFT.s.sol";
 
 contract MoodNftIntegrationTest is Test {
     MoodNFT public moodNft;
